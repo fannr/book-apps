@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookApps NoerraCode.</title>
+    <meta
+      name="description"
+      content="build bookapps with HTML, CSS, Javacript"
+    />
+    <meta name="keywords" content="HTML, CSS, Javacrip, JS, Web Development" />
+    <meta name="author" content="NoerraCode." />
+    <!-- Icons Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script defer src="assets/js/script.js"></script>
+    <script defer src="assets/js/localStorage.js"></script>
+  </head>
+  <body>
+    <!-- Dialog -->
+    <dialog class="modal">
+      <div class="details__book">
+        <div class="details__content">
+          <div class="details__images">
+            <img class="detail__img" src="assets/img/yukino.jpg" alt="asdasd" />
+          </div>
+          <div class="details__text">
+            <h3>Title</h3>
+            <p class="detail__title">Title</p>
+            <h3>Penulis</h3>
+            <p class="detail__penulis">Penulis</p>
+            <h3>Terbit</h3>
+            <p class="detail__terbit">Terbit</p>
+          </div>
+        </div>
+        <h3 class="sinopsis">Sinopsis</h3>
+        <p class="detail__sinopsis">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+          excepturi porro maiores ut obcaecati dolores impedit, ex, nulla
+          voluptatem iusto at officia doloribus quidem sunt, ab fuga ad
+          voluptates repellat.
+        </p>
+        <a href="#" id="close">Close</a>
+      </div>
+      <div class="form__modal">
+        <h2 class="title"><i class="bi bi-book"></i> Add Books</h2>
+        <div class="dialog__content">
+          <form>
+            <div class="formGroup">
+              <label for="title">Title</label>
+              <input
+                required
+                id="title"
+                type="text"
+                placeholder="Cth: elaina, hori, yukino, nami, asuna, marin, robin, nishimiya, mitsuha"
+              />
+            </div>
+            <div class="formGroup">
+              <label for="penulis">Penulis</label>
+              <input
+                required
+                id="penulis"
+                type="text"
+                placeholder="Example: Uknown"
+              />
+            </div>
+            <div class="formGroup">
+              <label for="terbit">Terbit</label>
+              <input required id="terbit" type="date" />
+            </div>
+            <div class="formGroup">
+              <label for="sinopsis">Sinopsis</label>
+              <textarea
+                rows="5"
+                required
+                id="sinopsis"
+                placeholder="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam reprehenderit nesciunt dolor veritatis omnis ratione cumque facilis temporibus quos cupiditate cum laudantium quae tempora, fuga vitae nulla neque quas illum..."
+              ></textarea>
+            </div>
+
+            <div class="buttons">
+              <a href="#" id="close">Close</a>
+              <button type="submit" id="textBooks">Add Books</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- Navbar -->
+    <nav class="container__navbar">
+      <h1>BookApps</h1>
+      <p>NoerraCode.</p>
+    </nav>
+    <!-- End of Navbar -->
+
+    <main class="container">
+      <section class="container__content">
+        <div>
+          <a href="#" id="addBooks" class="container__addbooks">
+            <i class="bi bi-bookmark-plus-fill"></i><span>Add Books</span></a
+          >
+        </div>
+
+        <div class="input">
+          <input
+            data-filter="all"
+            id="querySearch"
+            type="text"
+            autocomplete="off"
+            autofocus="on"
+            placeholder="Search by title Books"
+          />
+        </div>
+
+        <div class="container__category">
+          <span eventSpan class="active" data-filter="all">Semua</span>
+          <span data-filter="pending" eventSpan>Belum Dibaca</span>
+          <span data-filter="completed" eventSpan>Selesai Dibaca</span>
+        </div>
+        <div class="container__remove">
+          <p class="totalEl">Total Books: <span id="total">0</span></p>
+          <a href="#" id="removeAll" data-filter="all">RemoveAll</a>
+        </div>
+      </section>
+
+      <section class="container__books"><h2>Add your new Books!</h2></section>
+    </main>
+
+    <div class="container__alert">
+      <div class="alert">
+        <div class="alert__main">
+          <i class="bi bi-check-circle-fill"></i>
+          <p></p>
+        </div>
+        <div class="alert__close">
+          <a href="#">
+            <i class="bi bi-x-circle-fill"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
