@@ -172,8 +172,8 @@ function addData() {
     todoBooks.push(dataBooks);
     alertMessage("Add Data!");
   }
-
-  saveData(todoBooks);
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(todoBooks));
+  showBooks(todoBooks, this.dataset.filter);
   modals.close();
   changeForm();
 }
@@ -205,6 +205,9 @@ function editButtons(idBooks, idElementBooks) {
   const data = findBooks(idBooks);
   elIdBooks = idElementBooks;
   findTodo = findBooks(idBooks);
+  const filter = document.querySelector(".container__category span.active")
+    .dataset.filter;
+  document.querySelector("form").dataset.filter = filter;
 
   changeForm({ data });
 
