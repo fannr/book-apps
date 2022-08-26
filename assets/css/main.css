@@ -157,6 +157,13 @@ input[type="text"]:focus {
   flex-wrap: wrap;
 }
 
+.container__books__card.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  transform: translateY(0px);
+}
+
 .container__books__card {
   background-color: white;
   border: 1px solid #552e5a;
@@ -164,8 +171,12 @@ input[type="text"]:focus {
   width: 250px;
   padding: 0.6em;
   box-shadow: -5px 5px 0px #552e5a;
-  transition: 0.3s;
+  transition: 0.8s;
   position: relative;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-50px);
 }
 
 .container__category span.active {

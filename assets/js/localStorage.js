@@ -4,7 +4,6 @@ const STORAGE_KEY = "BOOK_APPS";
 const img = ["asuna", "elaina", "hori", "marin", "nami", "yukino"];
 
 let todoBooks = [];
-
 let isUpdate = false;
 
 // Utility
@@ -125,6 +124,13 @@ function showBooks(data, filter = "all") {
     document.querySelector("#removeAll").classList.add("hide");
   } else {
     document.querySelector("#removeAll").classList.remove("hide");
+  }
+
+  const card = document.querySelectorAll(".container__books__card");
+  for (const c of card.entries()) {
+    setTimeout(() => {
+      c[1].classList.add("active");
+    }, c[0] * 200);
   }
 }
 
@@ -335,15 +341,15 @@ function detailBook(id) {
     .setAttribute(
       "src",
       `assets/img/${
-        title.toLowerCase() != "elaina" &&
-        title.toLowerCase() != "nami" &&
-        title.toLowerCase() != "yukino" &&
-        title.toLowerCase() != "marin" &&
-        title.toLowerCase() != "asuna" &&
-        title.toLowerCase() != "robin" &&
-        title.toLowerCase() != "mitsuha" &&
-        title.toLowerCase() != "nishimiya" &&
-        title.toLowerCase() != "hori"
+        book.title.toLowerCase() != "elaina" &&
+        book.title.toLowerCase() != "nami" &&
+        book.title.toLowerCase() != "yukino" &&
+        book.title.toLowerCase() != "marin" &&
+        book.title.toLowerCase() != "asuna" &&
+        book.title.toLowerCase() != "robin" &&
+        book.title.toLowerCase() != "mitsuha" &&
+        book.title.toLowerCase() != "nishimiya" &&
+        book.title.toLowerCase() != "hori"
           ? "default"
           : book.title.toLowerCase()
       }.jpg`

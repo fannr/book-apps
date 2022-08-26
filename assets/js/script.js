@@ -18,7 +18,8 @@ addBooks.addEventListener("click", function (e) {
   modals.showModal();
   isUpdate = false;
   document.querySelector("#sinopsis").value =
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet omnis perspiciatis harum accusamus molestias quae ea voluptate ratione accusantium, dolorem illo perferendis voluptatibus fugiat alias assumenda quaerat dolorum nobis voluptatem?";
+    "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit iusto nesciunt quo odio eaque id eligendi, in, accusamus incidunt, totam nobis! Possimus dolores explicabo alias fuga vitae facilis tenetur omnis!.";
+
   document.querySelector(".details__book").style.display = "none";
   document.querySelector(".form__modal").style.display = "block";
   textBooks.textContent = "Add Books";
